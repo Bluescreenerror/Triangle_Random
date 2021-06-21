@@ -29,6 +29,18 @@ while True:
             if j % 2 == 0: 
                 x_c = list1[j]
                 y_c = list1[j + 1]
+                pyautogui.moveTo(x_c, y_c)
+                pyautogui.click()
+                time.sleep(0.2)
+                pyautogui.moveTo(a-l, b)
+                pyautogui.drag(l,0)
+                p = hypotenuse * math.sin(math.pi/3)
+                q = hypotenuse * math.cos(math.pi/3)
+                pyautogui.drag(-q,-p)
+                pyautogui.drag(-q, p)
+                l1.append(a)
+                l1.append(b)
+                triangle_type = random.randint(0,1)
             else:
                 x_c = list1[j - 1]
                 y_c = list1[j]
@@ -55,6 +67,17 @@ while True:
             if j % 2 == 0: 
                 x_c = list1[j]
                 y_c = list1[j + 1]
+                pyautogui.moveTo(x_c, y_c)
+                pyautogui.click()
+                time.sleep(0.2)
+                pyautogui.moveTo(a-l, b)
+                pyautogui.drag(l,0)
+                p = hypotenuse * math.sin(math.pi/3)
+                q = hypotenuse * math.cos(math.pi/3)
+                pyautogui.drag(-q,p)
+                pyautogui.drag(-q,-p)
+                l1.append(a)
+                l1.append(b)
             else:
                 x_c = list1[j - 1]
                 y_c = list1[j]
